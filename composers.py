@@ -68,4 +68,4 @@ Modern = {
 }
 
 # Collection of all periods listed
-collection = [Baroque, Classical, Romantic, Modern]
+collection = {'Baroque': Baroque, 'Classical': Classical, 'Romantic': Romantic, 'Modern': Modern}
