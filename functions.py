@@ -7,9 +7,10 @@ def clickShuffle():
   shuffle.click()
 
 
-def prevTier:
+# prevTier
 
 
 
 
-def exProtocol:
+# exProtocol
+ 
