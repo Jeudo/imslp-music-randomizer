@@ -25,7 +25,9 @@ def tutorial():
   print('If you find a random era/composer or chosen era/composer to be unfit to your liking, then you may choose to restart, OR keep running the program to produce new results.\n')
   time.sleep(3)
 
-
+def movingOn():
+  print('Would you like a random composer, or to continue on to the musical eras?\n')
+  time.sleep(1.5)
 
 # exProtocol
  
