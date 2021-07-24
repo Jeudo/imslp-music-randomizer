@@ -12,7 +12,7 @@ def clickShuffle():
 
 
 def tutorial():
-  print('This program seeks to streamline the process of finding new classical music pieces.\n')
+  print('\nThis program seeks to streamline the process of finding new classical music pieces.\n')
   time.sleep(1.5)
   print('This program will accomplish its goal by using the International Music Score Library Project (IMSLP) database of composers and compositions.\n')
   time.sleep(3)
@@ -37,7 +37,7 @@ def iterIntro():
   elif tut_conf.lower() == 's':
     movingOn()
   else:
-    print('Invalid input. Please try again.')
+    print('\nInvalid input. Please try again.')
     iterIntro()
 
 # exProtocol
