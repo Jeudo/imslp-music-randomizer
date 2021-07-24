@@ -1,5 +1,5 @@
 # Baroque period composers
-baroque = {
+Baroque = {
 'Johann Pachelbel': 'https://imslp.org/wiki/Category:Pachelbel,_Johann/Collections',
 'Arcangelo Corelli': 'https://imslp.org/wiki/Category:Corelli,_Arcangelo',
 'Alessandro Scarlatti': 'https://imslp.org/wiki/Category:Scarlatti,_Alessandro',
@@ -12,7 +12,7 @@ baroque = {
 }
 
 # Classical period composers
-classical = {
+Classical = {
 'Johann Stamitz': 'https://imslp.org/wiki/Category:Stamitz%2C_Johann',
 'Joseph Haydn': 'https://imslp.org/wiki/Category:Haydn,_Joseph',
 'Luigi Boccherini': 'https://imslp.org/wiki/Category:Boccherini,_Luigi',
@@ -25,7 +25,7 @@ classical = {
 }
 
 # Romantic period composers
-romantic = {
+Romantic = {
 'Niccolò Paganini': 'https://imslp.org/wiki/Category:Paganini,_Niccol%C3%B2',
 'Hector Berlioz': 'https://imslp.org/wiki/Category:Berlioz,_Hector',
 'Felix Mendelssohn': 'https://imslp.org/wiki/Category:Mendelssohn,_Felix',
@@ -55,7 +55,7 @@ romantic = {
 }
 
 # Modern period composers
-modern = {
+Modern = {
 'Claude Debussy': 'https://imslp.org/wiki/Category:Debussy,_Claude',
 'Arnold Schoenberg': 'https://imslp.org/wiki/Category:Schoenberg,_Arnold',
 'Maurice Ravel': 'https://imslp.org/wiki/Category:Ravel,_Maurice',
@@ -68,4 +68,4 @@ modern = {
 }
 
 # Collection of all periods listed
-collection = [baroque, classical, romantic, modern]
+collection = [Baroque, Classical, Romantic, Modern]
