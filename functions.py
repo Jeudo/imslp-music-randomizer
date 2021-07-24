@@ -29,7 +29,7 @@ def movingOn():
   print('Would you like a random composer, or to continue on to the musical eras?\n')
   time.sleep(1.5)
 
-def iterChoice():
+def iterIntro():
   tut_conf = input('Type "t" for the tutorial or "s" to skip it: ')
   if tut_conf.lower() == 't':
     tutorial()
@@ -38,7 +38,7 @@ def iterChoice():
     movingOn()
   else:
     print('Invalid input. Please try again.')
-    iterChoice()
+    iterIntro()
 
 # exProtocol
  
