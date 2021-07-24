@@ -7,8 +7,9 @@ def clickShuffle():
   shuffle.click()
 
 
-def prevPage:
+def prevTier:
 
 
 
-def constEx:
+
+def exProtocol:
