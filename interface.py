@@ -7,6 +7,8 @@ from functions import *
 
 print('Welcome to the composer shuffler!\n')
 time.sleep(1.5)
-print('Would you like a random composer, or to continue on to the musical eras?\n')
+print('Would you like to experience the tutorial?')
 time.sleep(1.5)
- 
+
+iterIntro()
+
