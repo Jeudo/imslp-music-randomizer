@@ -12,3 +12,4 @@ time.sleep(1.5)
 
 iterIntro()
 
+iterFirstTier()

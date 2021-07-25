@@ -1,13 +1,8 @@
 import lxml
+import selenium
 from selenium import webdriver
 import time
-
-driver = webdriver.Chrome(executable_path=r"C:\Users\Brothers\AppData\Local\Programs\Python\Python39\Lib\site-packages\selenium\webdriver\chrome")
-
-def clickShuffle():
-  shuffle = driver.find_element_by_id('catrandomp1')
-  shuffle.click()
-
+import os
 
 # prevTier
 
@@ -35,6 +30,35 @@ def iterIntro():
   else:
     print('\nInvalid input. Please try again.')
     iterIntro()
+
+eraTier = "All right- moving on to the musical eras."
+
+def iterFirstTier():
+  first_tier = input('Type "r" for a random composer from the entire IMSLP database, or "e" to continue to the musical eras: ')
+  if first_tier.lower() == 'r':
+    print("Choice confirmed: random composer. Check the program once you are done looking at the webpage.")
+    time.sleep(1.5)
+    driver = webdriver.Chrome() 
+    driver.get('https://imslp.org/wiki/Category:Composers')
+    driver.maximize_window()
+    shuffle = driver.find_element_by_class_name('cattool')
+    shuffle.click()
+    while True:
+      restart = input("Would you like to end the program and close your tabs? Type 'y' for yes and 'n' for no. ")
+      if restart.lower() == 'y':
+        print("Thank you for using this program!")
+        time.sleep(2)
+        break
+      elif restart.lower() == 'n':
+        print("The program will now wait for 5 minutes and close after time is up.")
+        print("You may also close the program whenever you please, but know that the created tabs will close when the program closes.")
+        time.sleep(300)
+        break
+  elif first_tier.lower() == 'e':
+    print(eraTier)
+  else:
+    print('\nInvalid input. Please try again.')
+    iterFirstTier()
 
 # exProtocol
  
