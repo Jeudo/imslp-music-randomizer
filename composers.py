@@ -69,3 +69,4 @@ Modern = {
 
 # Collection of all periods listed
 collection = {'Baroque': Baroque, 'Classical': Classical, 'Romantic': Romantic, 'Modern': Modern}
+collection_list = ['Baroque', 'Classical', 'Romantic', 'Modern']
