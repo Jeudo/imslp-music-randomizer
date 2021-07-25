@@ -17,7 +17,7 @@ def tutorial():
   print('If you find a random era/composer or chosen era/composer to be unfit to your liking, then you may choose to restart, OR keep running the program to produce new results.\n')
 
 def movingOn():
-  print('Would you like a random composer, or to continue on to the musical eras?\n')
+  print('\nWould you like a random composer, or to continue on to the musical eras?')
   time.sleep(1.5)
 
 def iterIntro():
@@ -36,7 +36,7 @@ eraTier = "All right- moving on to the musical eras."
 def iterFirstTier():
   first_tier = input('Type "r" for a random composer from the entire IMSLP database, or "e" to continue to the musical eras: ')
   if first_tier.lower() == 'r':
-    print("Choice confirmed: random composer. Check the program once you are done looking at the webpage.")
+    print("\nChoice confirmed: random composer. Check the program once you are done looking at the webpage.")
     time.sleep(1.5)
     driver = webdriver.Chrome() 
     driver.get('https://imslp.org/wiki/Category:Composers')
@@ -46,7 +46,7 @@ def iterFirstTier():
     while True:
       restart = input("Would you like to end the program and close your tabs? Type 'y' for yes and 'n' for no. ")
       if restart.lower() == 'y':
-        print("Thank you for using this program!")
+        print("\nThank you for using this program!")
         time.sleep(2)
         break
       elif restart.lower() == 'n':
@@ -60,5 +60,7 @@ def iterFirstTier():
     print('\nInvalid input. Please try again.')
     iterFirstTier()
 
+def iterSecondTier():
+  print("Here are the musical eras: ")
 # exProtocol
  
