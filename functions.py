@@ -73,6 +73,8 @@ def randomEra(collection_list):
         conf = input('Type "r" for another random choice, or "c" to continue to the next section: ')
         if conf.lower() == 'r':
             randomEra(collection_list)
+        elif conf.lower() == 'c':
+          iterThirdTier(random_era)
     elif len(collection_list) == 0:
         eraReset()
 
@@ -86,5 +88,41 @@ def iterSecondTier():
     eraReset()
   elif rc_era.lower() == 'c':
     era_inquiry = input("\nWhich era would you like? Choose from the above list by typing the era: ")
-    if era_inquiry.lower() in collection_list:
-      print("To be continued")
+    if era_inquiry.lower().title() in collection_list:
+      iterThirdTier(era_inquiry.lower().title())
+    else:
+      print("Invalid input. Please try again.")
+      iterSecondTier()
+  else:
+    print("Invalid input. Please try again")
+    iterSecondTier()
+
+
+def iterThirdTier(era):
+  print("You have chosen the {} era. Here are all the composers in {} era:".format(str(era).lower().title(),str(era).lower().title()))
+  final_era = collection[era]
+  print(list(final_era.keys()))
+  print("Would you like a random or chosen composer?")
+  rc_compose = input('Type "r" for a random composer or "c" for a chosen composer: ')
+  if rc_compose.lower() == 'r':
+    era_keys = final_era.keys()
+    era_values = final_era.values()
+    shuffle_era = random.choice(list(era_keys))
+    print("Random composer: {}".format(str(shuffle_era)))
+    print("Would you like to continue to the composer's webpage or have another random entry?")
+    will_you = input('Type "c" for continue or "r" for another random composer: ')
+    if will_you.lower() == 'c':
+      print("Understood. Opening the {}'s webpage.".format(str(shuffle_era).lower().title()))
+      web_opening = list(era_values)[list(era_keys).index(shuffle_era)]
+      time.sleep(1.5)
+      driver = webdriver.Chrome() 
+      driver.get(web_opening)
+      driver.maximize_window()
+      shuffle = driver.find_element_by_class_name('cattool')
+      shuffle.click()
+      time.sleep(20)
+    elif will_you.lower() == 'r':
+      iterThirdTier(era)
+    else:
+      print("Invalid input. Please try again.")
+      iterThirdTier(era)

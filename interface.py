@@ -5,7 +5,7 @@ import time
 from composers import *
 from functions import *
 
-randomEra()
+iterIntro()
 
 iterFirstTier()
 
