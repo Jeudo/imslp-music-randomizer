@@ -2,7 +2,7 @@ import lxml
 import selenium
 from selenium import webdriver
 import time
-import os
+from composers import *
 
 # prevTier
 
@@ -60,7 +60,5 @@ def iterFirstTier():
     print('\nInvalid input. Please try again.')
     iterFirstTier()
 
-def iterSecondTier():
-  print("Here are the musical eras: ")
 # exProtocol
  
