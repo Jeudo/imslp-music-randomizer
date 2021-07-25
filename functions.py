@@ -4,8 +4,6 @@ from selenium import webdriver
 import time
 from composers import *
 
-# prevTier
-
 
 def tutorial():
   print('\nThis program seeks to streamline the process of finding new classical music pieces.\n')
@@ -60,5 +58,8 @@ def iterFirstTier():
     print('\nInvalid input. Please try again.')
     iterFirstTier()
 
-# exProtocol
+def iterSecondTier():
+  print("Here are the musical eras: ")
+
+
  
