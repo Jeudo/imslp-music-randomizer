@@ -1,6 +1,8 @@
 import lxml
-import selenium
+from selenium import webdriver
 import time
+
+driver = webdriver.Chrome(executable_path=r"C:\Users\Brothers\AppData\Local\Programs\Python\Python39\Lib\site-packages\selenium\webdriver\chrome")
 
 def clickShuffle():
   shuffle = driver.find_element_by_id('catrandomp1')
@@ -8,7 +10,6 @@ def clickShuffle():
 
 
 # prevTier
-
 
 
 def tutorial():
