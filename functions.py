@@ -3,6 +3,7 @@ import selenium
 from selenium import webdriver
 import time
 from composers import *
+import random
 
 
 def tutorial():
@@ -29,7 +30,7 @@ def iterIntro():
     print('\nInvalid input. Please try again.')
     iterIntro()
 
-eraTier = "All right- moving on to the musical eras."
+eraTier = "All right- moving on to the musical eras.\n"
 
 def iterFirstTier():
   first_tier = input('Type "r" for a random composer from the entire IMSLP database, or "e" to continue to the musical eras: ')
@@ -58,8 +59,32 @@ def iterFirstTier():
     print('\nInvalid input. Please try again.')
     iterFirstTier()
 
+def eraReset():
+    collection_list = ['Baroque', 'Classical', 'Romantic', 'Modern']
+    randomEra(collection_list)
+
+def randomEra(collection_list):
+    if len(collection_list) > 0:
+        print("\nYour random era is: ")
+        random_era = random.choice(collection_list)
+        print(random_era)
+        collection_list.remove(random_era)
+        print("Would you like another choice, or to continue to the next section?")
+        conf = input('Type "r" for another random choice, or "c" to continue to the next section: ')
+        if conf.lower() == 'r':
+            randomEra(collection_list)
+    elif len(collection_list) == 0:
+        eraReset()
+
 def iterSecondTier():
   print("Here are the musical eras: ")
-
-
- 
+  for item in collection_list:
+    print(item),
+  print('Would you like a random or chosen era?')
+  rc_era = input('Type "r" for a random era or "c" for a chosen era: ')
+  if rc_era.lower() == 'r':
+    eraReset()
+  elif rc_era.lower() == 'c':
+    era_inquiry = input("\nWhich era would you like? Choose from the above list by typing the era: ")
+    if era_inquiry.lower() in collection_list:
+      print("To be continued")
