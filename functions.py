@@ -50,7 +50,7 @@ def iterFirstTier():
         time.sleep(2)
         break
       elif restart.lower() == 'n':
-        print("The program will now wait for 5 minutes and close after time is up.")
+        print("The program will now wait for 5 minutes and close after the time is up.")
         print("You may also close the program whenever you please, but know that the created tabs will close when the program closes.")
         time.sleep(300)
         break
