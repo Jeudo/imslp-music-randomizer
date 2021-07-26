@@ -12,7 +12,7 @@ options.add_experimental_option('excludeSwitches', ['enable-logging'])
 # and that keeps the program running indefinitely.
 def exProtocol():
   while True:
-    restart = input('Would you like to end the program and close your tabs? Type "n" for yes and "n" for no. ')
+    restart = input('Would you like to end the program and close your tabs? Type "y" for yes and "n" for no. ')
     if restart.lower() == 'y':
       print("\nThank you for using this program!")
       time.sleep(2)
