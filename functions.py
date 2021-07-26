@@ -7,7 +7,7 @@ import random
 
 def exProtocol():
   while True:
-    restart = input("Would you like to end the program and close your tabs? Type 'y' for yes and 'n' for no. ")
+    restart = input('Would you like to end the program and close your tabs? Type "n" for yes and "n" for no. ')
     if restart.lower() == 'y':
       print("\nThank you for using this program!")
       time.sleep(2)
@@ -46,7 +46,7 @@ def iterIntro():
 eraTier = "\nAll right- moving on to the musical eras.\n"
 
 def iterFirstTier():
-  first_tier = input('Type "r" for a random composer from the entire IMSLP database, or "e" to continue to the musical eras: ')
+  first_tier = input('Type "r" for a random composer from the entire IMSLP database, or "c" to continue to the musical eras: ')
   if first_tier.lower() == 'r':
     print("\nChoice confirmed: random composer. Check the program once you are done looking at the webpage.")
     time.sleep(1.5)
@@ -56,7 +56,7 @@ def iterFirstTier():
     shuffle = driver.find_element_by_class_name('cattool')
     shuffle.click()
     exProtocol()
-  elif first_tier.lower() == 'e':
+  elif first_tier.lower() == 'c':
     print(eraTier)
   else:
     print('\nInvalid input. Please try again.')
@@ -116,7 +116,7 @@ def iterThirdTier(era):
     shuffle_era = random.choice(list(era_keys))
     print("\nRandom composer: {}".format(str(shuffle_era)))
     print("Would you like to continue to the composer's webpage or have another random entry?")
-    will_you = input('Type "c" for continue or "r" for another random composer: ')
+    will_you = input('Type "r" for another random composer or "c" to continue: ')
     if will_you.lower() == 'c':
       print("\nUnderstood. Opening {}'s webpage.".format(str(shuffle_era).lower().title()))
       web_opening = list(era_values)[list(era_keys).index(shuffle_era)]
