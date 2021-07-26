@@ -67,6 +67,7 @@ Modern = {
 'Dmitry Shostakovich': 'https://imslp.org/wiki/Category:Shostakovich,_Dmitry'
 }
 
-# Collection of all periods listed
+# Dictionary of periods to streamline calling dictionaries
 collection = {'Baroque': Baroque, 'Classical': Classical, 'Romantic': Romantic, 'Modern': Modern}
+# Collection of all periods listed
 collection_list = ['Baroque', 'Classical', 'Romantic', 'Modern']
