@@ -5,6 +5,9 @@ import time
 from composers import *
 import random
 
+options = webdriver.ChromeOptions()
+options.add_experimental_option('excludeSwitches', ['enable-logging'])
+
 # exProtocol is an exit function that includes quality of life interactive messages
 # and that keeps the program running indefinitely.
 def exProtocol():
@@ -64,7 +67,7 @@ def iterFirstTier():
   if first_tier.lower() == 'r':
     print("\nChoice confirmed: random composer. Check the program once you are done looking at the webpage.")
     time.sleep(1.5)
-    driver = webdriver.Chrome() 
+    driver = webdriver.Chrome(options=options) 
     driver.get('https://imslp.org/wiki/Category:Composers')
     driver.maximize_window()
     shuffle = driver.find_element_by_class_name('cattool')
@@ -151,7 +154,7 @@ def iterThirdTier(era):
       print("\nUnderstood. Opening {}'s webpage.".format(str(shuffle_era).lower().title()))
       web_opening = list(era_values)[list(era_keys).index(shuffle_era)]
       time.sleep(1.5)
-      driver = webdriver.Chrome() 
+      driver = webdriver.Chrome(options=options) 
       driver.get(web_opening)
       driver.maximize_window()
       shuffle = driver.find_element_by_class_name('cattool')
@@ -174,7 +177,7 @@ def iterThirdTier(era):
       print("Composer chosen. Pulling up {}'s webpage.".format(final_comp))
       web_opening = list(era_values)[list(era_keys).index(final_comp)]
       time.sleep(1.5)
-      driver = webdriver.Chrome() 
+      driver = webdriver.Chrome(options=options) 
       driver.get(web_opening)
       driver.maximize_window()
       shuffle = driver.find_element_by_class_name('cattool')
