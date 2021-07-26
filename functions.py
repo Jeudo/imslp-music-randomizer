@@ -73,7 +73,7 @@ def randomEra(collection_list):
         print(random_era)
         collection_list.remove(random_era)
         print("Would you like another choice, or to continue to the next section?")
-        conf = input('Type "r" for another random choice, or "c" to continue to the next section: ')
+        conf = input('Type "r" for another random choice, or "c" to continue to the composers: ')
         if conf.lower() == 'r':
             randomEra(collection_list)
         elif conf.lower() == 'c':
@@ -93,7 +93,7 @@ def iterSecondTier():
   if rc_era.lower() == 'r':
     eraReset()
   elif rc_era.lower() == 'c':
-    era_inquiry = input("\nWhich era would you like? Choose from the above list by typing the era: ")
+    era_inquiry = input("\nWhich era would you like? Choose from the above list by typing the era name: ")
     if era_inquiry.lower().title() in collection_list:
       iterThirdTier(era_inquiry.lower().title())
     else:
