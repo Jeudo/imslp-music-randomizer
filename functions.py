@@ -78,6 +78,9 @@ def randomEra(collection_list):
             randomEra(collection_list)
         elif conf.lower() == 'c':
           iterThirdTier(random_era)
+        else:
+          print("\nInvalid input. Please try again")
+          iterSecondTier()
     elif len(collection_list) == 0:
         eraReset()
 
@@ -94,10 +97,10 @@ def iterSecondTier():
     if era_inquiry.lower().title() in collection_list:
       iterThirdTier(era_inquiry.lower().title())
     else:
-      print("Invalid input. Please try again.")
+      print("\nInvalid input. Please try again.")
       iterSecondTier()
   else:
-    print("Invalid input. Please try again")
+    print("\nInvalid input. Please try again")
     iterSecondTier()
 
 
@@ -127,7 +130,7 @@ def iterThirdTier(era):
     elif will_you.lower() == 'r':
       iterThirdTier(era)
     else:
-      print("Invalid input. Please try again.")
+      print("\nInvalid input. Please try again.")
       iterThirdTier(era)
   elif rc_compose.lower() == 'c':
     print("Enter the number of the composer, as it appears in the following list.")
@@ -148,5 +151,8 @@ def iterThirdTier(era):
       shuffle.click()
       exProtocol()
     else:
-      print("Invalid input. Please try again.")
+      print("\nInvalid input. Please try again.")
       iterThirdTier()
+  else:
+    print("\nInvalid input. Please try again.")
+    iterThirdTier(era)
