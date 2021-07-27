@@ -47,7 +47,8 @@ def tutorial():
   print('3) a random or chosen popular composer from the established era\n') 
   print('If you find a random era/composer or chosen era/composer to be unfit to your liking, then you may choose to restart, OR keep running the program to produce new results.')
   print('\nWhile the webpages are loading, do not click out of the tab or else the program will malfunction and you will have to press the IMSLP Shuffle button on your own.')
-
+  print('\nAlso, when the program runs its course, you will have the option to run the program again.')
+  
 # movingOn helped simplify iterIntro and reduce
 # the amount of code on the screen.
 def movingOn():
