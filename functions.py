@@ -184,7 +184,7 @@ def iterThirdTier(era):
     for item in final_era:
       print(index, item)
       index += 1
-    print("Enter the number of the composer, as it appears in the following list.")
+    print("Enter the number of the composer, as it appears in the list.")
     choose_comp = input("Enter the number here: ")
     if 0 <= int(choose_comp) <= (len(era_keys) - 1):
       final_comp = list(era_keys)[int(choose_comp)]
