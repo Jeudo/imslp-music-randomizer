@@ -18,10 +18,23 @@ def exProtocol():
       time.sleep(2)
       break
     elif restart.lower() == 'n':
-      print("The program will now wait for 5 minutes and close after the time is up.")
-      print("You may also close the program whenever you please, but know that the created tabs will close when the program closes.")
-      time.sleep(300)
-      break
+      redo = input('Would you like to run the program again? Type "y" for yes or "no" for no. ')
+      if redo.lower() == 'y':
+        print("Running program again.")
+        iterIntro()
+        iterFirstTier()
+        iterSecondTier()
+      elif redo.lower() == 'n':
+        print("The program will now wait for 5 minutes and close after the time is up.")
+        print("You may also close the program whenever you please, but know that the created tabs will close when the program closes.")
+        time.sleep(300)
+        break
+      else:
+        print("Invalid input. Please try again.")
+        exProtocol()
+    else:
+      print("Invalid input. Please try again.")
+      exProtocol()
 
 # The tutorial function is compilation of strings that serve 
 # to educate a new user on what the program is and how to use it.
