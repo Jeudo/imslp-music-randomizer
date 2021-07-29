@@ -53,7 +53,7 @@ def tutorial():
 # the amount of code on the screen.
 def movingOn():
   print('\nWould you like a random composer, or to continue on to the musical eras?')
-  time.sleep(1.5)
+  time.sleep(1)
 
 # iterIntro is a looped function that lets
 # the user either skip or experience the tutorial.
